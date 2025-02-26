@@ -4,7 +4,7 @@ class StoryManager:
     def __init__(self, story_file):
         with open(story_file, 'r', encoding='utf-8') as f:
             self.story_data = json.load(f)
-        self.current_scene = "start"
+        self.current_scene = "node_0"
 
     def get_scene(self):
         return self.story_data["scenes"][self.current_scene]

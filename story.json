@@ -1,24 +1,25 @@
 {
-    "scenes": {
-      "start": {
-        "text": "당신은 어두운 숲 속에 서 있습니다. 앞에 세 갈래 길이 보입니다.",
-        "choices": [
-          {"text": "왼쪽 길로 간다", "next_scene": "left_path"},
-          {"text": "오른쪽 길로 간다", "next_scene": "right_path"},
-          {"text": "AI에게 길을 물어본다", "next_scene": "ask_ai"}
-        ]
+  "scenes": {
+      "node_3": {
+          "text": "산이 보인다",
+          "choices": []
       },
-      "left_path": {
-        "text": "왼쪽 길로 가자 어둠 속에서 소리가 들립니다.",
-        "choices": []
+      "node_2": {
+          "text": "바다가 보인다",
+          "choices": []
       },
-      "right_path": {
-        "text": "오른쪽 길은 밝고 평화로워 보입니다.",
-        "choices": []
-      },
-      "ask_ai": {
-        "text": "AI가 길을 추천해줍니다.",
-        "use_ai": true
+      "node_0": {
+          "text": "당신은 두 갈래 길을 만났다",
+          "choices": [
+              {
+                  "text": "오른쪽으로 가자",
+                  "next_scene": "node_2"
+              },
+              {
+                  "text": "왼쪽으로 가자",
+                  "next_scene": "node_3"
+              }
+          ]
       }
-    }
   }
+}
